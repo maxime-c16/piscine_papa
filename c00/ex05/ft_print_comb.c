@@ -1,4 +1,4 @@
-#include<unistd.h>
+#include <unistd.h>
 
 void	ft_print_comb(void)
 {
@@ -9,11 +9,11 @@ void	ft_print_comb(void)
 	a = 48;
 	b = 48;
 	c = 48;
-	while(a <= 57)
+	while (a <= 57)
 	{	
-		while(b <= 57)
+		while (b <= 57)
 		{
-			while(c <= 57)
+			while (c <= 57)
 			{
 				if (a < b)
 				{
@@ -33,6 +33,5 @@ void	ft_print_comb(void)
 	b = 48;
 	a++;
 	}
-
-	return;
+	return ;
 }
