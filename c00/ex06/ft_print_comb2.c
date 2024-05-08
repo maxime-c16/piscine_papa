@@ -1,40 +1,37 @@
 #include <unistd.h>
 
-void	ft_print_comb2(void)
+int print(int nb)
 {
 	char	a;
 	char	b;
-	char	c;
-	char	d;
 
-	a = 48;
-	b = 48;
-	c = 48;
-	d = 48;
-	while(a <=57)
+	a = (nb / 10) + 48;
+	b = (nb % 10) + 48;
+	write(1, &a, 1);
+	write(1, &b, 1);
+	return (0);
+}
+
+
+int ft_print_comb2(void)
+{
+	int	A;
+	int	B;
+
+	A = 0;
+	B = 1;
+	while(A <= 99)
 	{
-		while(b <= 57)
+		while(B <= 99)
 		{
-			while(c <= 57)
-			{
-				while(d <= 57)
-				{
-					write(1, &a, 1);
-					write(1, &b, 1);
-					write(1, " ", 1);
-					write(1,&c, 1);
-					write(1,&d, 1);
-					write(1,", ", 2);
-					d++;
-				}
-				d = 48;
-				c++;
-			}
-			c = 48;
-			b++;
+			print(A);
+			write(1, " ", 1);
+			print(B);
+			write(1, ", ", 2);
+			B++;
 		}
-		b = 48;
-		a++;
+		A++;
+		B = A + 1;
 	}
-return ;
+	return (0);
 }
