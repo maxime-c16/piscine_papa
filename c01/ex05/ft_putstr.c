@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcauchy <coherence.ing@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/13 15:04:23 by lcauchy           #+#    #+#             */
+/*   Updated: 2024/05/13 15:09:59 by lcauchy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putstr (char *str)
@@ -11,21 +23,4 @@ void	ft_putstr (char *str)
 		i++;
 	}
 	return ;
-}
-
-int	main(int ac, char *av[])
-{
-	int		a;
-	char	*str;
-
-	a = 1;
-	while (a < ac)
-	{
-		ft_putstr(av[a]);
-		write(1,"\n", 1);
-		a++;
-	}
-	str = "ET VOILA LE TRAVAIL FINAL...";
-	ft_putstr(str);
-	return (0);
 }
