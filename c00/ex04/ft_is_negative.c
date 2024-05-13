@@ -6,5 +6,6 @@ void	ft_is_negative(int n)
 		write(1, "P", 1);
 	else
 		write(1, "N", 1);
+		write(1, "PAPA", 4);
 	return ;
 }

@@ -123,8 +123,7 @@ void ft_print_combn(int n)
 																				write(1, &b, 1);
 																			if(n >= 1)
 																				write(1, &a, 1);
-																			write(1, ",", 1);
-																			write(1, " ", 1);
+																			write(1, ", ", 2);
 																			a++;
 																		}
 																	b++;
