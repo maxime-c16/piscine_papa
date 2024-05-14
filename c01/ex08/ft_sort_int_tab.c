@@ -22,7 +22,6 @@ int le_plus_grand(int *tab, int size)
 
 void    ft_sort_int_tab(int *tab, int size)
 {
-    int sort[size];
     int index;
     int tempon;
     int i;
