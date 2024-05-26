@@ -33,7 +33,7 @@ void    ft_ascii_to_hexa(char ascii)
     return ;
 }
 
-int	ft_put_adress_reste(long a)
+int	ft_put_adress_reste(unsigned long a)
 {
 	int	reste_div_par_seize;
 
@@ -45,7 +45,7 @@ int	ft_put_adress_reste(long a)
 	return (reste_div_par_seize);
 }
 
-void	ft_put_adress(long nb)
+void	ft_put_adress(unsigned long nb)
 {
 	int	tab[10];
 	int	i;
@@ -75,7 +75,7 @@ void    *ft_print_memory(char *adrr, unsigned int size)
     int     a;
     int     aa;
     int     aaa;
-    long    adress;
+    unsigned long    adress;
     int     overflow;
     int     nb_esp_final;
 
@@ -83,7 +83,10 @@ void    *ft_print_memory(char *adrr, unsigned int size)
     aa = 0;
     aaa = 0;
 
-    adress = 0x10a161f40;
+
+
+//    adress = 0x10a161f40;
+adress = (unsigned long)adrr;
     if (size == 0)
         return (0);
     while (a < size)
@@ -147,20 +150,22 @@ int	main(int ac, char *av[])
     int             j = 0;
     long            adress;
 
-    adrr = malloc(sizeof(char) * 10000000);
+//    adrr = malloc(sizeof(char) * 10000000);
 //    adrr = "tototititititititititi";
-//    adrr = "Bonjour les aminches\n\n\nc est fo u\ntout\nce qu on peut faire avec\n\n\nprint_memory\n\n\n\nlol\nlol\n \n";
+    adrr = "Bonjour les aminches\n\n\nc est fo u\ntout\nce qu on peut faire avec\n\n\nprint_memory\n\n\n\nlol\nlol\n \n";
 
-    size = 1260000;
-    j = size - 127;
+    size = 92;
 
-    while (j < size)
-    {
-        adrr[j] = i;
-        i++;
-        j++;
-        
-    }
+//    j = size - 127;
+
+//    while (j < size)
+  
+//    {
+//        adrr[j] = i;
+//        i++;
+//        j++;
+//        
+//    }
 
     ft_print_memory(adrr, size);
     return (0);
